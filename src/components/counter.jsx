@@ -14,14 +14,9 @@ class Counter extends Component {
     console.log('Counter - Unmount');
   }
 
-  // state = {
-  //   value: this.props.counter.value,
-  //   tags: ['tag1', 'tag2']
-  // };
-
   renderTags() {
-    if (this.state.tags.length === 0) return <p>There are no tags!</p>
-    return <ul>{ this.state.tags.map(tag => <li key={tag}>{ tag }</li>) }</ul>
+    if (this.props.counter.tags.length === 0) return <p>no tags</p>
+    return <ul>{ this.props.counter.tags.map(tag => <li key={tag}>{ tag }</li>) }</ul>
   }
 
   render() { 
@@ -41,10 +36,7 @@ class Counter extends Component {
 
         <button onClick={() => this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm m-2">Delete</button>
 
-
-        {/* { this.state.tags.length === 0 && 'Please create a new tag!'}
-        { this.renderTags() } */}
-
+        { this.renderTags() }
 
       </div>
     );

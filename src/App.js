@@ -6,10 +6,10 @@ import NavBar from './components/navbar';
 class App extends Component {
   state = { 
     counters: [
-      { id: 1, value: 0},
-      { id: 2, value: 1},
-      { id: 3, value: 2},
-      { id: 4, value: 5},
+      { id: 1, value: 0, tags: ['tag1', 'tag2']},
+      { id: 2, value: 1, tags: ['tag1', 'tag3']},
+      { id: 3, value: 2, tags: []},
+      { id: 4, value: 5, tags: ['tag3', 'tag5']},
     ]
    };
 
